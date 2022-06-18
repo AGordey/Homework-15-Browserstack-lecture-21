@@ -17,7 +17,7 @@ public class MyTests extends TestBase {
     @Test
     void searchTest() {
         String searchValue = "Ubuntu";
-        back();
+        //back();
         step("Type search", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchValue);
@@ -28,7 +28,7 @@ public class MyTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
                     .shouldHave(text(searchValue));
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_description"))
-                    .shouldHave(text("Linux distribution developed by Canonical Ltd."));
+                    .shouldHave(text("Debian-based Linux operating system"));
         });
 
         step("Open page with article about" + searchValue, () -> {

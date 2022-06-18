@@ -10,9 +10,9 @@ import static io.qameta.allure.Allure.step;
 
 public class SearchTests extends TestBase {
     @Test
-    @Disabled
+
     void searchTest() {
-        back();
+       // back();
         step("Type search", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");

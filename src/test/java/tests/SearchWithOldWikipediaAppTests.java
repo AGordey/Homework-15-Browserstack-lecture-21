@@ -10,9 +10,8 @@ import static io.qameta.allure.Allure.step;
 
 public class SearchWithOldWikipediaAppTests extends TestBase {
     @Test
-    @Disabled
-    void searchTest() {
-        back();
+        void searchTest() {
+       // back();
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");
